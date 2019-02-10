@@ -221,23 +221,105 @@ Error message and password prompt
 
 <li>Advanced Tag</li>
 
+<li>Background Colors</li>
+
 <li>Beginner Tag</li>
 
 <li>Border Colors</li>
 
+<li>Bordered Colors: advanced</li>
+
+<li>Bordered Colors: beginner</li>
+
+<li>Bordered Colors: elementary</li>
+
+<li>Bordered Colors: intermediate</li>
+
+<li>change-log</li>
+
 <li>Clay Tag</li>
 
-<li>Dark Colors</li>
+<li>Contents</li>
+
+<li>Create and Delete Demo Tiddlers</li>
+
+<li>Dark Gradient: zclay</li>
+
+<li>Dark Gradient: ziron</li>
+
+<li>Dark Gradient: zmaroon</li>
+
+<li>Dark Gradient: zolive</li>
+
+<li>Dark Gradient: zyale</li>
 
 <li>Elementary Tag</li>
+
+<li>Gradient Dark Colors</li>
+
+<li>Gradient Light Colors</li>
+
+<li>High Tone: appricot</li>
+
+<li>High Tone: aquamarine</li>
+
+<li>High Tone: beige</li>
+
+<li>High Tone: lightsalmon</li>
+
+<li>High Tone: lime</li>
+
+<li>High Tone: mint</li>
+
+<li>High Tone: palegreen</li>
+
+<li>High Tone: pink</li>
+
+<li>High Tone: powderblue</li>
 
 <li>Intermediate Tag</li>
 
 <li>Iron Tag</li>
 
-<li>Light Colors</li>
+<li>Light Gradient: zblue</li>
+
+<li>Light Gradient: zcyan</li>
+
+<li>Light Gradient: zgreen</li>
+
+<li>Light Gradient: zlemon</li>
+
+<li>Light Gradient: zorange</li>
+
+<li>Light Gradient: zpurple</li>
+
+<li>Light Gradient: zred</li>
+
+<li>Light Gradient: zsilver</li>
 
 <li>Links</li>
+
+<li>Low Tone: aliceblue</li>
+
+<li>Low Tone: bisque</li>
+
+<li>Low Tone: cornsilk</li>
+
+<li>Low Tone: gainsboro</li>
+
+<li>Low Tone: honeydew</li>
+
+<li>Low Tone: lavender</li>
+
+<li>Low Tone: lavenderblush</li>
+
+<li>Low Tone: lemonchiffon</li>
+
+<li>Low Tone: lightcyan</li>
+
+<li>Low Tone: mistyrose</li>
+
+<li>Low Tone: snow</li>
 
 <li>macro/colorize</li>
 
@@ -251,11 +333,25 @@ Error message and password prompt
 
 <li>Semantic Colors</li>
 
+<li>semantic-colors-contents</li>
+
+<li>stylesheet/semantic/bghightone-colors</li>
+
+<li>stylesheet/semantic/bglowtone-colors</li>
+
+<li>stylesheet/semantic/border-colors</li>
+
 <li>stylesheet/semantic/borders</li>
 
 <li>stylesheet/semantic/darkcolors</li>
 
 <li>stylesheet/semantic/lightcolors</li>
+
+<li>stylesheet/semantic/tags-bghightone-colors</li>
+
+<li>stylesheet/semantic/tags-bglowtone-colors</li>
+
+<li>stylesheet/semantic/tags-border-colors</li>
 
 <li>stylesheet/semantic/tags-borders</li>
 
@@ -9254,7 +9350,7 @@ Mohammad Rahmani: https://github.com/kookma
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Semantic Colors]]</pre>
+# [[table of contents]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9430,7 +9526,7 @@ This tiddler contains the user defined macros. Edit to see the code.
 <div created="20190209054600885" creator="Mohammad" modified="20190209184211832" modifier="Mohammad" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
-<div created="20190209054709220" creator="Mohammad" modified="20190209200751164" modifier="Mohammad" title="$:/state/tab/sidebar--595412856">
+<div created="20190209054709220" creator="Mohammad" modified="20190210103254255" modifier="Mohammad" title="$:/state/tab/sidebar--595412856">
 <pre>table of contents</pre>
 </div>
 <div created="20190209091937050" creator="M" modified="20190209091938640" modifier="Mohamma" title="$:/status/UserName">
@@ -9620,10 +9716,55 @@ This tiddler contains the user defined macros. Edit to see the code.
 <div created="20190209185547927" creator="Mohammad" modified="20190209185603261" modifier="Mohammad" tags="advanced" title="Advanced Tag">
 <pre></pre>
 </div>
+<div created="20190210045338435" creator="Mohammad" modified="20190210101723859" modifier="Mohammad" tags="Contents" title="Background Colors">
+<pre>\define colors()
+&lt;span class=&quot;$(color)$&quot;&gt;This is $(color)$ color&lt;/span&gt;&lt;br&gt;
+\end
+
+
+
+! Background colors
+These are a set of color classes change the whole tiddler background in a monotone form. These colors are categorized as:
+
+# Low tone (lighter colors)
+# High tone (light but darker than group one
+
+!! Low tone and light colors
+&lt;&lt;&lt;
+These are eleven colors, start from //aliceblue// to //snow//.
+
+&lt;$list filter=&quot;[list[stylesheet/semantic/tags-bglowtone-colors]sort[]]&quot; variable=&quot;color&quot;&gt;
+&lt;&lt;colors&gt;&gt;
+&lt;/$list&gt;
+
+!!! Demo
+Click on the below button to close all tiddlers and open sample tiddlers colorized with low tone background colors.
+
+&lt;&lt;open-all filter:&quot;[tag[demo]] +[search:title[low tone]] +[!sort[]]&quot; label:&quot;Open low tone examples&quot;&gt;&gt;
+&lt;&lt;&lt;
+
+
+
+
+!! High tone and little dark colors
+&lt;&lt;&lt;
+These are nine color classes. In comparison to low tone colors, these are a bit darker.
+
+&lt;$list filter=&quot;[list[stylesheet/semantic/tags-bghightone-colors]sort[]]&quot; variable=&quot;color&quot;&gt;
+&lt;&lt;colors&gt;&gt;
+&lt;/$list&gt;
+
+!!! Demo
+Click on the below button to close all tiddlers and open sample tiddlers colorized with high tone background colors.
+
+&lt;&lt;open-all filter:&quot;[tag[demo]] +[search:title[high tone]] +[!sort[]]&quot; label:&quot;Open high tone examples&quot;&gt;&gt;
+
+&lt;&lt;&lt;</pre>
+</div>
 <div created="20190209185440128" creator="Mohammad" modified="20190209185457742" modifier="Mohammad" tags="beginner" title="Beginner Tag">
 <pre></pre>
 </div>
-<div created="20190209180053079" creator="Mohammad" modified="20190209200812414" modifier="Mohammad" tags="Contents" title="Border Colors">
+<div created="20190209180053079" creator="Mohammad" modified="20190210095240519" modifier="Mohammad" tags="Contents" title="Border Colors">
 <pre>!! Semantic border colors
 These are four border colors.
 
@@ -9632,16 +9773,134 @@ These are four border colors.
 # &lt;&lt;colorize Green intermediate&gt;&gt;: ''Intermediate level''
 # &lt;&lt;colorize Blue advanced&gt;&gt;: ''Advanced level''
 
+!! How to use
+Simply add one of the above colorized tags (//beginner//, //elementary//, //intermediate//, //advanced//) to your tiddler and save it. For example if you a wish to categorize a tiddler in beginner category, add tag `beginner` to it.
+
 
 !! Demo
-Click on the below button to close all tiddlers and open sample tiddlers colorized with semantic dark colors.
+Click on the below button to close all tiddlers and open sample tiddlers colorized with border colors.
 
-&lt;&lt;open-all filter:&quot;[[Advanced Tag]] [[Intermediate Tag]] [[Elementary Tag]] [[Beginner Tag]]&quot; label:&quot;Open examples&quot;&gt;&gt;</pre>
+&lt;&lt;open-all filter:&quot;[tag[demo]] +[search:title[bordered colors]]&quot; label:&quot;Open colored border examples&quot;&gt;&gt;</pre>
+</div>
+<div created="20190210101554393" creator="Mohammad" field01="Sample field..." modified="20190210101554393" modifier="Mohammad" tags="advanced demo" title="Bordered Colors: advanced">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101554393" creator="Mohammad" field01="Sample field..." modified="20190210101554393" modifier="Mohammad" tags="beginner demo" title="Bordered Colors: beginner">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101554393" creator="Mohammad" field01="Sample field..." modified="20190210101554393" modifier="Mohammad" tags="elementary demo" title="Bordered Colors: elementary">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101554394" creator="Mohammad" field01="Sample field..." modified="20190210101554394" modifier="Mohammad" tags="intermediate demo" title="Bordered Colors: intermediate">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210103131569" creator="Mohammad" modified="20190210103156616" modifier="Mohammad" tags="" title="change-log">
+<pre>!! Revision log
+* Second release: Feb 10th, 2019
+** Added 20 new background colors
+** Added new macro to create demos and delete them
+* Initial release: Feb 9th, 2019</pre>
 </div>
 <div created="20190209191208932" creator="Mohammad" modified="20190209191223658" modifier="Mohammad" tags="zclay" title="Clay Tag">
 <pre>{{Test}}</pre>
 </div>
-<div created="20190209161228726" creator="Mohammad" modified="20190209200227894" modifier="Mohammad" tags="Contents" title="Dark Colors">
+<div created="20190210095814556" creator="Mohammad" list="[[Border Colors]] [[Gradient Light Colors]] [[Gradient Dark Colors]] [[Background Colors]] [[Using as Class Field]]" modified="20190210095817868" modifier="Mohammad" title="Contents">
+<pre></pre>
+</div>
+<div created="20190210072705723" creator="Mohammad" modified="20190210094948587" modifier="Mohammad" tags="" title="Create and Delete Demo Tiddlers">
+<pre>\define delete-all(tag)
+&lt;$button&gt; Delete all Tiddlers tagged with: $tag$ 
+&lt;$action-deletetiddler $filter=&quot;[tag[$tag$]]&quot;/&gt;
+&lt;/$button&gt;
+\end
+
+
+\define text() {{Test}}
+\define oneTid(myTitle, myTag)
+  &lt;$action-createtiddler 
+    $basetitle=&lt;&lt;__myTitle__&gt;&gt;
+    tags=&quot;&quot;&quot;$myTag$ demo&quot;&quot;&quot;
+    text=&lt;&lt;text&gt;&gt;
+    field01=&quot;Sample field...&quot;
+  /&gt; 
+\end
+
+\define make-title(lbl) $lbl$: $(color)$
+
+\define createTids(tid, label)
+&lt;$button&gt; Make $label$ Examples
+&lt;$list filter=&quot;[list[$tid$]sort[]]&quot; variable=&quot;color&quot;&gt;
+&lt;$macrocall $name=&quot;oneTid&quot; myTitle=&lt;&lt;make-title &quot;$label$&quot;&gt;&gt; myTag=&lt;&lt;color&gt;&gt;/&gt;
+&lt;/$list&gt;
+&lt;/$button&gt;
+\end
+
+! Create demo tiddlers
+Different demo tiddler can be created and removed here.
+
+
+
+!! Light and dark gradient colors
+&lt;&lt;&lt;
+The below buttons create example tiddlers for light and dark gradient colors.
+
+&lt;&lt;createTids tid:&quot;stylesheet/semantic/tags-lightcolors&quot; label:&quot;Light Gradient&quot;&gt;&gt;
+
+&lt;&lt;createTids tid:&quot;stylesheet/semantic/tags-darkcolors&quot; label:&quot;Dark Gradient&quot;&gt;&gt;
+
+&lt;&lt;&lt;
+
+
+
+!! Colored left border
+&lt;&lt;&lt;
+The below button creates example tiddlers for colored left border.
+
+&lt;&lt;createTids tid:&quot;stylesheet/semantic/tags-border-colors&quot; label:&quot;Bordered Colors&quot;&gt;&gt;
+
+&lt;&lt;&lt;
+
+
+!! Low and high tone background colors
+&lt;&lt;&lt;
+The below buttons create example tiddlers for low and high tone background colors.
+
+&lt;&lt;createTids tid:&quot;stylesheet/semantic/tags-bglowtone-colors&quot; label:&quot;Low Tone&quot;&gt;&gt;
+
+&lt;&lt;createTids tid:&quot;stylesheet/semantic/tags-bghightone-colors&quot; label:&quot;High Tone&quot;&gt;&gt;
+&lt;&lt;&lt;
+
+
+
+
+!! Delete all examples
+&lt;&lt;&lt;
+&lt;p style=&quot;color:red;&quot;&gt;
+Warning: This button will delete all tiddlers tagged with `demo`.
+&lt;/p&gt;
+
+&lt;&lt;delete-all demo&gt;&gt;
+&lt;&lt;&lt;</pre>
+</div>
+<div created="20190210101551571" creator="Mohammad" field01="Sample field..." modified="20190210101551571" modifier="Mohammad" tags="zclay demo" title="Dark Gradient: zclay">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101551572" creator="Mohammad" field01="Sample field..." modified="20190210101551572" modifier="Mohammad" tags="ziron demo" title="Dark Gradient: ziron">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101551574" creator="Mohammad" field01="Sample field..." modified="20190210101551574" modifier="Mohammad" tags="zmaroon demo" title="Dark Gradient: zmaroon">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101551574" creator="Mohammad" field01="Sample field..." modified="20190210101551574" modifier="Mohammad" tags="zolive demo" title="Dark Gradient: zolive">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101551575" creator="Mohammad" field01="Sample field..." modified="20190210101551575" modifier="Mohammad" tags="zyale demo" title="Dark Gradient: zyale">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190209185507169" creator="Mohammad" modified="20190209185522062" modifier="Mohammad" tags="elementary" title="Elementary Tag">
+<pre></pre>
+</div>
+<div created="20190209161228726" creator="Mohammad" modified="20190210095458487" modifier="Mohammad" tags="Contents" title="Gradient Dark Colors">
 <pre>!! Semantic dark colors
 These are five dark colors.
 
@@ -9652,22 +9911,16 @@ These are five dark colors.
 #&lt;&lt;colorize &quot;''Clay''&quot; zclay&gt;&gt;
 #&lt;&lt;colorize &quot;''Iron''&quot; ziron&gt;&gt;
 
+!! How to use
+Simply add one of the above colorized tags (//zyale//, //zmaroon//, //zolive//, //zclay//, //ziron//) to your tiddler and save it. For example if you a wish to categorize a tiddler in Yale category, add tag `zyale`to it.
+
 
 !! Demo
 Click on the below button to close all tiddlers and open sample tiddlers colorized with semantic dark colors.
 
-&lt;&lt;open-all filter:&quot;[[Iron Tag]] [[Clay Tag]] [[Olive Tag]] [[Maroon Tag]] [[Yale Tag]]&quot; label:&quot;Open dark colors&quot;&gt;&gt;</pre>
+&lt;&lt;open-all filter:&quot;[tag[demo]] +[search:title[dark gradient]]&quot; label:&quot;Open dark color examples&quot;&gt;&gt;</pre>
 </div>
-<div created="20190209185507169" creator="Mohammad" modified="20190209185522062" modifier="Mohammad" tags="elementary" title="Elementary Tag">
-<pre></pre>
-</div>
-<div class="intermediate" created="20190209185527007" creator="Mohammad" modified="20190209185537991" modifier="Mohammad" tags="intermediate" title="Intermediate Tag">
-<pre></pre>
-</div>
-<div created="20190209191145315" creator="Mohammad" modified="20190209191202523" modifier="Mohammad" tags="ziron" title="Iron Tag">
-<pre>{{Test}}</pre>
-</div>
-<div created="20190209170650953" creator="Mohammad" modified="20190209200236078" modifier="Mohammad" tags="Contents" title="Light Colors">
+<div created="20190209170650953" creator="Mohammad" modified="20190210095830272" modifier="Mohammad" tags="Contents" title="Gradient Light Colors">
 <pre>!! Semantic light colors
 These are eight light colors.
 
@@ -9680,12 +9933,73 @@ These are eight light colors.
 # &lt;&lt;colorize Red zred&gt;&gt;
 # &lt;&lt;colorize Silver zsilver&gt;&gt;
 
-!! Demo
-Click on the below button to close all tiddlers and open sample tiddlers colorized with semantic dark colors.
+!! How to use
+Simply add one of the above colorized tags (//zblue//, //zcyan//, //zgreen//, //zlemon//, //zorange//, //zpurple//, //zred//, //zsilver//) to your tiddler and save it. For example if you a wish to categorize a tiddler in Lemon category, add tag `zlemon` to it.
 
-&lt;&lt;open-all filter:&quot;[[zSilver Tag]] [[zRed Tag]] [[zPurple Tag]] [[zOrange Tag]] [[zLemon Tag]] [[zGreen Tag]] [[zCyan Tag]] [[zBlue Tag]]&quot; label:&quot;Open light colors&quot;&gt;&gt;</pre>
+
+!! Demo
+Click on the below button to close all tiddlers and open sample tiddlers colorized with semantic light colors.
+
+&lt;&lt;open-all filter:&quot;[tag[demo]] +[search:title[light gradient]] +[!sort[]]&quot; label:&quot;Open light color examples&quot;&gt;&gt;</pre>
 </div>
-<div created="20190209151103622" creator="Mohammad" modified="20190209184721634" modifier="Mohammad" tags="link" title="Links">
+<div created="20190210101556194" creator="Mohammad" field01="Sample field..." modified="20190210101556194" modifier="Mohammad" tags="appricot demo" title="High Tone: appricot">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101556194" creator="Mohammad" field01="Sample field..." modified="20190210101556194" modifier="Mohammad" tags="aquamarine demo" title="High Tone: aquamarine">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101556195" creator="Mohammad" field01="Sample field..." modified="20190210101556195" modifier="Mohammad" tags="beige demo" title="High Tone: beige">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101556195" creator="Mohammad" field01="Sample field..." modified="20190210101556195" modifier="Mohammad" tags="lightsalmon demo" title="High Tone: lightsalmon">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101556196" creator="Mohammad" field01="Sample field..." modified="20190210101556196" modifier="Mohammad" tags="lime demo" title="High Tone: lime">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101556196" creator="Mohammad" field01="Sample field..." modified="20190210101556196" modifier="Mohammad" tags="mint demo" title="High Tone: mint">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101556196" creator="Mohammad" field01="Sample field..." modified="20190210101556196" modifier="Mohammad" tags="palegreen demo" title="High Tone: palegreen">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101556196" creator="Mohammad" field01="Sample field..." modified="20190210101556196" modifier="Mohammad" tags="pink demo" title="High Tone: pink">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101556197" creator="Mohammad" field01="Sample field..." modified="20190210101556197" modifier="Mohammad" tags="powderblue demo" title="High Tone: powderblue">
+<pre>{{Test}}</pre>
+</div>
+<div class="intermediate" created="20190209185527007" creator="Mohammad" modified="20190209185537991" modifier="Mohammad" tags="intermediate" title="Intermediate Tag">
+<pre></pre>
+</div>
+<div created="20190209191145315" creator="Mohammad" modified="20190209191202523" modifier="Mohammad" tags="ziron" title="Iron Tag">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101550532" creator="Mohammad" field01="Sample field..." modified="20190210101550532" modifier="Mohammad" tags="zblue demo" title="Light Gradient: zblue">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101550533" creator="Mohammad" field01="Sample field..." modified="20190210101550533" modifier="Mohammad" tags="zcyan demo" title="Light Gradient: zcyan">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101550534" creator="Mohammad" field01="Sample field..." modified="20190210101550534" modifier="Mohammad" tags="zgreen demo" title="Light Gradient: zgreen">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101550534" creator="Mohammad" field01="Sample field..." modified="20190210101550534" modifier="Mohammad" tags="zlemon demo" title="Light Gradient: zlemon">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101550535" creator="Mohammad" field01="Sample field..." modified="20190210101550535" modifier="Mohammad" tags="zorange demo" title="Light Gradient: zorange">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101550536" creator="Mohammad" field01="Sample field..." modified="20190210101550536" modifier="Mohammad" tags="zpurple demo" title="Light Gradient: zpurple">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101550536" creator="Mohammad" field01="Sample field..." modified="20190210101550537" modifier="Mohammad" tags="zred demo" title="Light Gradient: zred">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101550537" creator="Mohammad" field01="Sample field..." modified="20190210101550537" modifier="Mohammad" tags="zsilver demo" title="Light Gradient: zsilver">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190209151103622" creator="Mohammad" modified="20190210053409374" modifier="Mohammad" tags="link" title="Links">
 <pre>; Custom styles by data tags
 :https://tiddlywiki.com/prerelease/#Custom%20styles%20by%20data-tags
 ; Color picker
@@ -9695,7 +10009,42 @@ Click on the below button to close all tiddlers and open sample tiddlers coloriz
 ;HSL color picker
 :http://hslpicker.com
 ;Colorful Semantics
-:https://www.slideshare.net/IntegratedTreatmentServices/colourful-semantics</pre>
+:https://www.slideshare.net/IntegratedTreatmentServices/colourful-semantics
+; Color versatility using tints, tones, and shades
+:https://www.viget.com/articles/tints-tones-shades/</pre>
+</div>
+<div created="20190210101555393" creator="Mohammad" field01="Sample field..." modified="20190210101555393" modifier="Mohammad" tags="aliceblue demo" title="Low Tone: aliceblue">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101555394" creator="Mohammad" field01="Sample field..." modified="20190210101555394" modifier="Mohammad" tags="bisque demo" title="Low Tone: bisque">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101555394" creator="Mohammad" field01="Sample field..." modified="20190210101555394" modifier="Mohammad" tags="cornsilk demo" title="Low Tone: cornsilk">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101555395" creator="Mohammad" field01="Sample field..." modified="20190210101555395" modifier="Mohammad" tags="gainsboro demo" title="Low Tone: gainsboro">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101555395" creator="Mohammad" field01="Sample field..." modified="20190210101555395" modifier="Mohammad" tags="honeydew demo" title="Low Tone: honeydew">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101555396" creator="Mohammad" field01="Sample field..." modified="20190210101555396" modifier="Mohammad" tags="lavender demo" title="Low Tone: lavender">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101555396" creator="Mohammad" field01="Sample field..." modified="20190210101555396" modifier="Mohammad" tags="lavenderblush demo" title="Low Tone: lavenderblush">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101555396" creator="Mohammad" field01="Sample field..." modified="20190210101555396" modifier="Mohammad" tags="lemonchiffon demo" title="Low Tone: lemonchiffon">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101555397" creator="Mohammad" field01="Sample field..." modified="20190210101555397" modifier="Mohammad" tags="lightcyan demo" title="Low Tone: lightcyan">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101555397" creator="Mohammad" field01="Sample field..." modified="20190210101555397" modifier="Mohammad" tags="mistyrose demo" title="Low Tone: mistyrose">
+<pre>{{Test}}</pre>
+</div>
+<div created="20190210101555397" creator="Mohammad" field01="Sample field..." modified="20190210101555397" modifier="Mohammad" tags="snow demo" title="Low Tone: snow">
+<pre>{{Test}}</pre>
 </div>
 <div created="20190209171510648" creator="Mohammad" modified="20190209171858782" modifier="Mohammad" tags="$:/tags/Macro" title="macro/colorize">
 <pre>\define colorize(label,color)
@@ -9733,8 +10082,8 @@ Email : m[dot]rahmani[at]aut[dot]ac[dot]ir
 
 &lt;&lt;open-all filter:&quot;[tag[example]sort[]]&quot; label:&quot;Open all examples&quot;&gt;&gt;</pre>
 </div>
-<div created="20190209181144346" creator="Mohammad" modified="20190209200549950" modifier="Mohammad" tags="" title="Semantic Colors">
-<pre>&lt;&lt;dbadge Tiddlywiki 5.1.17+ type:info&gt;&gt; &lt;&lt;dbadge License MIT type:success&gt;&gt;
+<div created="20190209181144346" creator="Mohammad" modified="20190210103128551" modifier="Mohammad" tags="" title="Semantic Colors">
+<pre>&lt;&lt;dbadge Tiddlywiki 5.1.17+ type:info&gt;&gt; &lt;&lt;dbadge License MIT type:success&gt;&gt; &lt;&lt;dbadge Release 2.0 type:warning&gt;&gt; 
 
 !Semantic colors
 &lt;&lt;&lt;
@@ -9749,9 +10098,9 @@ The mechanism used here is based on [[custom styles by data tags|https://tiddlyw
 &lt;&lt;&lt;
 !! Contents
 &lt;&lt;&lt;
-This wiki contains three groups of semantic colors:
+This wiki contains four groups of semantic colors:
 
-&lt;&lt;list-links &quot;[tag[Contents]]&quot; type:ol&gt;&gt;
+&lt;&lt;list-links &quot;[tag[Contents]] -[[Using as Class Field]]&quot; type:ol&gt;&gt;
 
 You can use any approach you like. They colorize partially the left side of tiddlers. The border colors group only apply colors to left border.
 &lt;&lt;&lt;
@@ -9769,9 +10118,11 @@ You can edit the stylesheets (see the installation below) and changes the tags n
 &lt;&lt;&lt;
 To install each set, simply drag and drop the stylesheet tiddler into your wiki
 
-* Border colors: [[stylesheet/semantic/tags-borders]]
+* Border colors: [[stylesheet/semantic/tags-border-colors]]
 * Dark colors: [[stylesheet/semantic/tags-darkcolors]]
 * Light colors: [[stylesheet/semantic/tags-lightcolors]]
+* Low tone background colors: [[stylesheet/semantic/tags-bglowtone-colors]]
+* High tone background colors: [[stylesheet/semantic/tags-bghightone-colors]]
 
 To use the new colorized tags, simply add the one you like to your tiddler. For example a tiddler tagged with `zolive` will get the olive theme.
 
@@ -9786,7 +10137,78 @@ To see the colorized tags, open each stylesheet above. The tag is the one comes 
 * References: [[Links]]
 * License: [[MIT License|$:/plugins/.mr/semantic-color/license]]
 * Author: [[Mohammad Rahmani|https://github.com/kookma]]
-&lt;&lt;&lt;</pre>
+&lt;&lt;&lt;
+
+
+{{change-log}}</pre>
+</div>
+<div caption="SC Tiddlers" created="20190209202027261" creator="Mohammad" list-after="table of contents" modified="20190210093955744" modifier="Mohammad" tags="$:/tags/SideBar" title="semantic-colors-contents">
+<pre>\define olist(filter,prefix:&quot;&quot;,class:&quot;&quot;,subtype:&quot;li&quot;,emptyMessage:&quot;No tiddler found&quot;)
+  &lt;ol class=&quot;$class$&quot; style=&quot;padding-bottom:10px;&quot;&gt;
+    &lt;$list filter=&quot;$filter$&quot; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt;&gt;
+    &lt;$set name=&quot;myTitle&quot; value={{!!title}}&gt;
+    &lt;$subtype$&gt;
+      &lt;$link to=&lt;&lt;myTitle&gt;&gt; &gt;
+        &lt;$transclude field=&quot;caption&quot;&gt;
+          &lt;$text text={{{ [&lt;myTitle&gt;removeprefix[$prefix$]] }}}/&gt;
+        &lt;/$transclude&gt;
+      &lt;/$link&gt;
+    &lt;/$subtype$&gt;
+    &lt;/$set&gt;
+    &lt;/$list&gt;
+  &lt;/ol&gt;
+\end
+
+&lt;!-- olist is a customized list-links to let remove prefix from title --&gt;
+
+!! Demos
+&lt;&lt;olist &quot;[all[shadows+tiddlers]tag[demo]]&quot; class:&quot;alert-warning&quot;&gt;&gt;
+
+!! Macros
+&lt;&lt;olist &quot;[tag[sc]tag[$:/tags/Macro]sort[title]]&quot; type:&quot;ol&quot; class:&quot;alert-danger&quot; prefix:&quot;&quot;&gt;&gt;
+
+!! Stylesheets
+&lt;&lt;olist &quot;[search:title[stylesheet/semantic]sort[title]]&quot; type:&quot;ol&quot; class:&quot;alert-primary&quot; prefix:&quot;stylesheet/semantic/&quot;&gt;&gt;
+
+&lt;&lt;vspace 2cm&gt;&gt;
+</pre>
+</div>
+<div created="20190210043239782" creator="Mohammad" list="powderblue aquamarine palegreen pink lightsalmon lime mint beige appricot" modified="20190210070731571" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/bghightone-colors" type="text/css">
+<pre>/* Colors taked from [1] https://www.w3schools.com/colors/colors_names.asp 
+[2] http://www.workwithcolor.com/color-chart-full-01.htm*/
+/* Higher tone background colors*/
+.powderblue{background-color:#b0e0e6}
+.aquamarine{background-color:#7fffd4;}
+.palegreen{background-color:#98fb98;}
+.pink{background-color:#ffc0cb;}
+.lightsalmon{background-color:#ffa07a;}
+.lime{background-color:#bfef45;}
+.mint{background-color:#aaffc3;}
+.beige{background-color:#fffac8;}
+.appricot{background-color:#ffd8b1;}</pre>
+</div>
+<div created="20181029071532524" creator="Mohammad" list="mistyrose lemonchiffon lavenderblush lavender honeydew lightcyan aliceblue cornsilk gainsboro bisque snow" modified="20190210070723161" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/bglowtone-colors" type="text/css">
+<pre>/* Colors taked from [1] https://www.w3schools.com/colors/colors_names.asp 
+[2] http://www.workwithcolor.com/color-chart-full-01.htm*/
+/*Low tone background colors*/
+.mistyrose{background-color:#ffe4e1;}
+.lemonchiffon{background-color:#fffacd;}
+.lavenderblush{background-color:#fff0f5;}
+.lavender{background-color:#e6e6fa;}
+.honeydew{background-color:#f0fff0;}
+.lightcyan{background-color:#e0ffff;}
+.aliceblue{background-color:#f0f8ff;}
+.cornsilk{background-color:#fff8dc;}
+.gainsboro{background-color:#dcdcdc;}
+.bisque{background-color:#ffe4c4;}
+.snow{background-color:#fffafa;}</pre>
+</div>
+<div created="20190209162403907" creator="Mohammad" modified="20190210051444217" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/border-colors" type="text/css">
+<pre>/* Only coloring the left border */
+.beginner {  border-left: 5px solid #fc6600;}
+.intermediate {  border-left: 5px solid #008000;}
+.advanced {  border-left: 5px solid #0080fe;}
+.elementary {  border-left: 5px solid #febf04;}</pre>
 </div>
 <div created="20190209162403907" creator="Mohammad" modified="20190209180033848" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/borders" type="text/css">
 <pre>/* Only coloring the left border */
@@ -9815,6 +10237,45 @@ To see the colorized tags, open each stylesheet above. The tag is the one comes 
 .zred{ background: linear-gradient(to right, #FF927F 0%, #FFEDEA 50px, #ffffff 40%);}
 .zpurple{ background: linear-gradient(to right, #CD75EA 0%, #FFECFF 50px, #ffffff 40%);}</pre>
 </div>
+<div created="20190210043445902" creator="Mohammad" list="powderblue aquamarine palegreen pink lightsalmon lime mint beige appricot" modified="20190210070759225" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/tags-bghightone-colors" type="text/css">
+<pre>/* Colors taked from [1] https://www.w3schools.com/colors/colors_names.asp 
+[2] http://www.workwithcolor.com/color-chart-full-01.htm*/
+/* High tone background colors*/
+[data-tags~=&quot;powderblue&quot;]{background-color:#B0E0E6}
+[data-tags~=&quot;aquamarine&quot;]{background-color:#7FFFD4;}
+[data-tags~=&quot;palegreen&quot;].PaleGreen{background-color:#98FB98;}
+[data-tags~=&quot;pink&quot;]{background-color:#FFC0CB;}
+[data-tags~=&quot;lightsalmon&quot;]{background-color:#FFA07A;}
+[data-tags~=&quot;lime&quot;]{background-color:#bfef45;}
+[data-tags~=&quot;mint&quot;]{background-color:#aaffc3;}
+[data-tags~=&quot;beige&quot;]{background-color:#fffac8;}
+[data-tags~=&quot;appricot&quot;]{background-color:#ffd8b1;}
+</pre>
+</div>
+<div created="20190210043517478" creator="Mohammad" list="mistyrose lemonchiffon lavenderblush lavender honeydew lightcyan aliceblue cornsilk gainsboro bisque snow" modified="20190210070803736" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/tags-bglowtone-colors" type="text/css">
+<pre>/* Colors taked from [1] https://www.w3schools.com/colors/colors_names.asp 
+[2] http://www.workwithcolor.com/color-chart-full-01.htm*/
+/*Low tone background colors*/
+[data-tags~=&quot;mistyrose&quot;]{background-color:#ffe4e1;}
+[data-tags~=&quot;lemonchiffon&quot;]{background-color:#fffacd;}
+[data-tags~=&quot;lavenderblush&quot;]{background-color:#fff0f5;}
+[data-tags~=&quot;lavender&quot;]{background-color:#e6e6fa;}
+[data-tags~=&quot;honeydew&quot;]{background-color:#f0fff0;}
+[data-tags~=&quot;lightcyan&quot;]{background-color:#e0ffff;}
+[data-tags~=&quot;aliceblue&quot;]{background-color:#f0f8ff;}
+[data-tags~=&quot;cornsilk&quot;]{background-color:#fff8dc;}
+[data-tags~=&quot;gainsboro&quot;]{background-color:#dcdcdc;}
+[data-tags~=&quot;bisque&quot;].{background-color:#ffe4c4;}
+[data-tags~=&quot;snow&quot;]{background-color:#FFFAFA;}</pre>
+</div>
+<div created="20190209185255753" creator="Mohammad" list="beginner elementary intermediate advanced" modified="20190210095343621" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/tags-border-colors" type="text/css">
+<pre>/* Only coloring the left border */
+
+[data-tags~=&quot;beginner&quot;]{  border-left: 5px solid #fc6600;}
+[data-tags~=&quot;elementary&quot;]{  border-left: 5px solid #febf04;}
+[data-tags~=&quot;intermediate&quot;]{  border-left: 5px solid #008000;}
+[data-tags~=&quot;advanced&quot;]{  border-left: 5px solid #0080fe;}</pre>
+</div>
 <div created="20190209185255753" creator="Mohammad" modified="20190209185424239" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/tags-borders" type="text/css">
 <pre>/* Only coloring the left border */
 
@@ -9823,7 +10284,7 @@ To see the colorized tags, open each stylesheet above. The tag is the one comes 
 [data-tags~=&quot;advanced&quot;]{  border-left: 5px solid #0080fe;}
 [data-tags~=&quot;elementary&quot;]{  border-left: 5px solid #febf04;}</pre>
 </div>
-<div created="20190209190815445" creator="Mohammad" modified="20190209190925774" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/tags-darkcolors" type="text/css">
+<div created="20190209190815445" creator="Mohammad" list="zyale zolive zmaroon ziron zclay" modified="20190210093312131" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/tags-darkcolors" type="text/css">
 <pre>[data-tags~=&quot;zyale&quot;]{ background: linear-gradient(to right, #363794 0%, #E2F2F8 50px, #ffffff 40%);}
 [data-tags~=&quot;zolive&quot;]{ background: linear-gradient(to right, #757519 0%, #F7F8EC 50px, #ffffff 40%);}
 [data-tags~=&quot;zmaroon&quot;]{ background: linear-gradient(to right, #A41029 0%, #FDE9EA 50px, #ffffff 40%);}
@@ -9832,7 +10293,7 @@ To see the colorized tags, open each stylesheet above. The tag is the one comes 
 
 </pre>
 </div>
-<div created="20190209185743376" creator="Mohammad" modified="20190209190225693" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/tags-lightcolors" type="text/css">
+<div created="20190209185743376" creator="Mohammad" list="zcyan zorange zlemon zsilver zblue zgreen zred zpurple" modified="20190210093232353" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/tags-lightcolors" type="text/css">
 <pre>/* Semantic light colors */
 [data-tags~=&quot;zcyan&quot;]{ background: linear-gradient(to right, #9ee8fa 0%, #d6f9ff  50px, #ffffff 40%);}
 [data-tags~=&quot;zorange&quot;]{ background: linear-gradient(to right, #FF7D32 0%, #FFEEE5 50px, #ffffff 40%);}
@@ -9843,10 +10304,18 @@ To see the colorized tags, open each stylesheet above. The tag is the one comes 
 [data-tags~=&quot;zred&quot;]{ background: linear-gradient(to right, #FF927F 0%, #FFEDEA 50px, #ffffff 40%);}
 [data-tags~=&quot;zpurple&quot;]{ background: linear-gradient(to right, #CD75EA 0%, #FFECFF 50px, #ffffff 40%);}</pre>
 </div>
-<div caption="Contents" created="20190209161853445" creator="Mohammad" list-after="$:/core/ui/SideBar/Open" modified="20190209162015747" modifier="Mohammad" tags="$:/tags/SideBar" title="table of contents">
+<div caption="Contents" created="20190209161853445" creator="Mohammad" list-after="$:/core/ui/SideBar/Open" modified="20190210103217617" modifier="Mohammad" tags="$:/tags/SideBar" title="table of contents">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc-selective-expandable &quot;Contents&quot;&gt;&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;
+
+!!! Utilities
+&lt;small&gt;
+
+* [[Create and Delete Demo Tiddlers]]
+* [[change-log]]
+
+&lt;/small&gt;</pre>
 </div>
 <div created="20190209091449329" modified="20190209091633474" tags="" title="Test">
 <pre>! Heading one
