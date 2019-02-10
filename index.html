@@ -363,6 +363,8 @@ Error message and password prompt
 
 <li>Test</li>
 
+<li>Use Case</li>
+
 <li>Yale Tag</li>
 
 <li>zBlue Tag</li>
@@ -9350,7 +9352,8 @@ Mohammad Rahmani: https://github.com/kookma
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[table of contents]]</pre>
+# [[stylesheet/semantic/tags-bglowtone-colors]]
+# [[stylesheet/semantic/tags-bghightone-colors]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -10082,21 +10085,22 @@ Email : m[dot]rahmani[at]aut[dot]ac[dot]ir
 
 &lt;&lt;open-all filter:&quot;[tag[example]sort[]]&quot; label:&quot;Open all examples&quot;&gt;&gt;</pre>
 </div>
-<div created="20190209181144346" creator="Mohammad" modified="20190210103128551" modifier="Mohammad" tags="" title="Semantic Colors">
+<div created="20190209181144346" creator="Mohammad" modified="20190210105437518" modifier="Mohammad" tags="" title="Semantic Colors">
 <pre>&lt;&lt;dbadge Tiddlywiki 5.1.17+ type:info&gt;&gt; &lt;&lt;dbadge License MIT type:success&gt;&gt; &lt;&lt;dbadge Release 2.0 type:warning&gt;&gt; 
 
-!Semantic colors
+! What is &quot;semantic colors&quot;?
 &lt;&lt;&lt;
-This is a set of CSS to apply colorful theme to individual tiddlers for categorization purpose. One main use case is learning area. For example you can use different colors for different levels of learning like orange for beginners and blue for advanced learners.
+Semantic colors are set of CSS to apply colorful theme to individual tiddlers for categorization purpose.
 
-It is possible to define different categories like (basics, macros, widgets) and customize the classes for that purpose. For example all tiddlers tagged with macro uses class //Clay// and all tiddlers tagged with widget uses class //Yale//.
+{{Use Case}}
 &lt;&lt;&lt;
 
-!! Mechanism
+! Mechanism
 &lt;&lt;&lt;
 The mechanism used here is based on [[custom styles by data tags|https://tiddlywiki.com/prerelease/#Custom%20styles%20by%20data-tags]]. The styles for //specified tags// defined in tiddlers tagged themselves with `$:/tags/Stylesheet`. Each tiddler is tagged with such those //specified tags// will get the customization.
 &lt;&lt;&lt;
-!! Contents
+
+! Contents
 &lt;&lt;&lt;
 This wiki contains four groups of semantic colors:
 
@@ -10105,7 +10109,7 @@ This wiki contains four groups of semantic colors:
 You can use any approach you like. They colorize partially the left side of tiddlers. The border colors group only apply colors to left border.
 &lt;&lt;&lt;
 
-!! Demo
+! Demo
 &lt;&lt;&lt;
 For demonstration, from sidebar, open ''Contents'' tab and click on each group you like. You can then open sample cases and see how they look like.
 &lt;&lt;&lt;
@@ -10114,7 +10118,8 @@ For demonstration, from sidebar, open ''Contents'' tab and click on each group y
 &lt;&lt;&lt;
 You can edit the stylesheets (see the installation below) and changes the tags name to meet your requirements. For example concepts, basics, developers, ...
 &lt;&lt;&lt;
-!! Installation
+
+! Installation
 &lt;&lt;&lt;
 To install each set, simply drag and drop the stylesheet tiddler into your wiki
 
@@ -10132,7 +10137,7 @@ To see the colorized tags, open each stylesheet above. The tag is the one comes 
 &lt;&lt;alert info &quot;''Note:'' These css are developed based on light themes of Tiddlywiki. Using them with dark theme needs some minor adjustments.&quot;&gt;&gt;
 
 
-!! More information
+! More information
 &lt;&lt;&lt;
 * References: [[Links]]
 * License: [[MIT License|$:/plugins/.mr/semantic-color/license]]
@@ -10237,13 +10242,13 @@ To see the colorized tags, open each stylesheet above. The tag is the one comes 
 .zred{ background: linear-gradient(to right, #FF927F 0%, #FFEDEA 50px, #ffffff 40%);}
 .zpurple{ background: linear-gradient(to right, #CD75EA 0%, #FFECFF 50px, #ffffff 40%);}</pre>
 </div>
-<div created="20190210043445902" creator="Mohammad" list="powderblue aquamarine palegreen pink lightsalmon lime mint beige appricot" modified="20190210070759225" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/tags-bghightone-colors" type="text/css">
+<div created="20190210043445902" creator="Mohammad" list="powderblue aquamarine palegreen pink lightsalmon lime mint beige appricot" modified="20190210124632308" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/tags-bghightone-colors" type="text/css">
 <pre>/* Colors taked from [1] https://www.w3schools.com/colors/colors_names.asp 
 [2] http://www.workwithcolor.com/color-chart-full-01.htm*/
 /* High tone background colors*/
 [data-tags~=&quot;powderblue&quot;]{background-color:#B0E0E6}
 [data-tags~=&quot;aquamarine&quot;]{background-color:#7FFFD4;}
-[data-tags~=&quot;palegreen&quot;].PaleGreen{background-color:#98FB98;}
+[data-tags~=&quot;palegreen&quot;]{background-color:#98FB98;}
 [data-tags~=&quot;pink&quot;]{background-color:#FFC0CB;}
 [data-tags~=&quot;lightsalmon&quot;]{background-color:#FFA07A;}
 [data-tags~=&quot;lime&quot;]{background-color:#bfef45;}
@@ -10252,7 +10257,7 @@ To see the colorized tags, open each stylesheet above. The tag is the one comes 
 [data-tags~=&quot;appricot&quot;]{background-color:#ffd8b1;}
 </pre>
 </div>
-<div created="20190210043517478" creator="Mohammad" list="mistyrose lemonchiffon lavenderblush lavender honeydew lightcyan aliceblue cornsilk gainsboro bisque snow" modified="20190210070803736" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/tags-bglowtone-colors" type="text/css">
+<div created="20190210043517478" creator="Mohammad" list="mistyrose lemonchiffon lavenderblush lavender honeydew lightcyan aliceblue cornsilk gainsboro bisque snow" modified="20190210124503139" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/tags-bglowtone-colors" type="text/css">
 <pre>/* Colors taked from [1] https://www.w3schools.com/colors/colors_names.asp 
 [2] http://www.workwithcolor.com/color-chart-full-01.htm*/
 /*Low tone background colors*/
@@ -10265,7 +10270,7 @@ To see the colorized tags, open each stylesheet above. The tag is the one comes 
 [data-tags~=&quot;aliceblue&quot;]{background-color:#f0f8ff;}
 [data-tags~=&quot;cornsilk&quot;]{background-color:#fff8dc;}
 [data-tags~=&quot;gainsboro&quot;]{background-color:#dcdcdc;}
-[data-tags~=&quot;bisque&quot;].{background-color:#ffe4c4;}
+[data-tags~=&quot;bisque&quot;]{background-color:#ffe4c4;}
 [data-tags~=&quot;snow&quot;]{background-color:#FFFAFA;}</pre>
 </div>
 <div created="20190209185255753" creator="Mohammad" list="beginner elementary intermediate advanced" modified="20190210095343621" modifier="Mohammad" tags="$:/tags/Stylesheet" title="stylesheet/semantic/tags-border-colors" type="text/css">
@@ -10338,6 +10343,23 @@ This is a quote.
 &gt;&lt;&lt;.lorem&gt;&gt;
 
 This is also a `sample` code.</pre>
+</div>
+<div created="20190210103803840" creator="Mohammad" modified="20190210105748881" modifier="Mohammad" tags="" title="Use Case">
+<pre>Tiddlywiki &quot;semantic colors&quot; has two objectives:
+
+# How it is simply possible to apply theme to an individual tiddler
+# Use semantic colors for categorization
+
+!!! Use-cases
+* Learning materials (each topic, category can have dedicated semantic color, like learning a foreign language)
+* Slideshow (section divider, each part can have a semantic color)
+* Books and tutorials ( different semantic colors can be applied to chapters, specific subjects, like example tiddlers)
+* Visual tags (instead of looking for tag bar and see to what category this subject (tiddler) belongs, you can identify it by its semantic color)
+
+
+It is possible to define different categories like (elementary, intermediate, advanced) and customize the classes for that purpose. For example all tiddlers tagged with //elementary// refer to subject of Elementary level.
+
+</pre>
 </div>
 <div created="20190209190936813" creator="Mohammad" modified="20190209190957402" modifier="Mohammad" tags="zyale" title="Yale Tag">
 <pre>{{Test}}</pre>
